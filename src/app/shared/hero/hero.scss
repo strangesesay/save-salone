@@ -1,0 +1,44 @@
+.hero{
+
+    min-height:90vh;
+    
+    display:flex;
+    
+    align-items:center;
+    
+    background:
+    
+    linear-gradient(
+    135deg,
+    rgba(11,110,79,.95),
+    rgba(46,139,87,.85)
+    ),
+    
+    url('/assets/hero/hero.jpg');
+    
+    background-size:cover;
+    
+    background-position:center;
+    
+    color:white;
+    
+    }
+    
+    
+    .hero-image{
+    
+    border-radius:30px;
+    
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.3);
+    
+    }
+    
+    
+    .btn-outline-light:hover{
+    
+    background:white;
+    
+    color:#0B6E4F;
+    
+    }
