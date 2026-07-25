@@ -1,0 +1,32 @@
+[
+    {
+    "title":"Education",
+    "icon":"bi-book",
+    "description":"Supporting schools, scholarships, digital literacy and teacher development."
+    },
+    
+    {
+    "title":"Environment",
+    "icon":"bi-tree",
+    "description":"Protecting nature through climate action and community awareness."
+    },
+    
+    {
+    "title":"Agriculture",
+    "icon":"bi-flower1",
+    "description":"Promoting sustainable farming and food security."
+    },
+    
+    {
+    "title":"Health",
+    "icon":"bi-heart-pulse",
+    "description":"Improving healthcare access and community wellbeing."
+    },
+    
+    {
+    "title":"Human Rights",
+    "icon":"bi-shield-check",
+    "description":"Promoting justice, equality and legal education."
+    }
+    
+    ]
