@@ -1,32 +1,117 @@
 [
     {
-    "title":"Education",
-    "icon":"bi-book",
-    "description":"Supporting schools, scholarships, digital literacy and teacher development."
+      "id": 1,
+      "title": "Education",
+      "shortDescription": "Creating opportunities for children, young people and adults to access quality education.",
+      "description": "SAVE SALONE works with communities, schools, educators and partners to improve access to quality and inclusive education across Sierra Leone.",
+      "icon": "bi-book",
+      "image": "assets/images/programs/education.jpg",
+      "colorClass": "education",
+      "activities": [
+        "School support and improvement",
+        "Scholarship and learning support",
+        "Teacher capacity building",
+        "Digital literacy programmes",
+        "Adult and community education"
+      ],
+      "beneficiaries": [
+        "School children",
+        "Teachers",
+        "Young people",
+        "Women and adults",
+        "Vulnerable communities"
+      ]
     },
-    
     {
-    "title":"Environment",
-    "icon":"bi-tree",
-    "description":"Protecting nature through climate action and community awareness."
+      "id": 2,
+      "title": "Environment",
+      "shortDescription": "Protecting Sierra Leone's natural environment through community-led climate action.",
+      "description": "Our environmental programmes promote sustainable communities, climate awareness, responsible waste management and protection of natural resources.",
+      "icon": "bi-tree",
+      "image": "assets/images/programs/environment.jpg",
+      "colorClass": "environment",
+      "activities": [
+        "Tree planting",
+        "Climate change awareness",
+        "Waste management",
+        "Community recycling",
+        "Environmental advocacy"
+      ],
+      "beneficiaries": [
+        "Rural communities",
+        "Young people",
+        "Farmers",
+        "Schools",
+        "Community groups"
+      ]
     },
-    
     {
-    "title":"Agriculture",
-    "icon":"bi-flower1",
-    "description":"Promoting sustainable farming and food security."
+      "id": 3,
+      "title": "Agriculture",
+      "shortDescription": "Supporting sustainable agriculture, food security and economic opportunities.",
+      "description": "SAVE SALONE supports farmers and communities with knowledge, skills and opportunities that contribute to sustainable agriculture and improved food security.",
+      "icon": "bi-flower1",
+      "image": "assets/images/programs/agriculture.jpg",
+      "colorClass": "agriculture",
+      "activities": [
+        "Farmer training",
+        "Sustainable farming",
+        "Food security initiatives",
+        "Youth agricultural programmes",
+        "Women's agricultural empowerment"
+      ],
+      "beneficiaries": [
+        "Smallholder farmers",
+        "Women farmers",
+        "Young farmers",
+        "Rural households",
+        "Agricultural cooperatives"
+      ]
     },
-    
     {
-    "title":"Health",
-    "icon":"bi-heart-pulse",
-    "description":"Improving healthcare access and community wellbeing."
+      "id": 4,
+      "title": "Health",
+      "shortDescription": "Improving access to health information, prevention and community wellbeing.",
+      "description": "Our health initiatives focus on community awareness, preventive healthcare, maternal and child health, sanitation, hygiene and access to essential health information.",
+      "icon": "bi-heart-pulse",
+      "image": "assets/images/programs/health.jpg",
+      "colorClass": "health",
+      "activities": [
+        "Maternal health awareness",
+        "Child health programmes",
+        "Community health outreach",
+        "Mental health awareness",
+        "Water, sanitation and hygiene"
+      ],
+      "beneficiaries": [
+        "Women",
+        "Children",
+        "Young people",
+        "Families",
+        "Vulnerable communities"
+      ]
     },
-    
     {
-    "title":"Human Rights",
-    "icon":"bi-shield-check",
-    "description":"Promoting justice, equality and legal education."
+      "id": 5,
+      "title": "Human Rights & Legal Education",
+      "shortDescription": "Promoting dignity, equality, justice and awareness of fundamental rights.",
+      "description": "SAVE SALONE promotes human rights awareness and legal education so that individuals and communities understand their rights and can make informed decisions.",
+      "icon": "bi-shield-check",
+      "image": "assets/images/programs/human-rights.jpg",
+      "colorClass": "human-rights",
+      "activities": [
+        "Human rights awareness",
+        "Civic education",
+        "Legal education",
+        "Child protection",
+        "Gender equality advocacy"
+      ],
+      "beneficiaries": [
+        "Women and girls",
+        "Children",
+        "Young people",
+        "Community leaders",
+        "Vulnerable groups"
+      ]
     }
-    
-    ]
+  ]

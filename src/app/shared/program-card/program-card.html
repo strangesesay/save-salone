@@ -1,1 +1,46 @@
-<p>program-card works!</p>
+<div class="program-card h-100">
+
+    <div class="program-image">
+  
+      <img
+        [src]="program.image"
+        [alt]="program.title"
+        class="img-fluid"
+      />
+  
+      <div class="program-icon">
+  
+        <i [class]="'bi ' + program.icon"></i>
+  
+      </div>
+  
+    </div>
+  
+    <div class="program-content">
+  
+      <span class="program-label">
+        SAVE SALONE PROGRAM
+      </span>
+  
+      <h3>
+        {{ program.title }}
+      </h3>
+  
+      <p>
+        {{ program.shortDescription }}
+      </p>
+  
+      <button
+        type="button"
+        class="btn btn-outline-success"
+        (click)="openDetails()">
+  
+        Explore Program
+  
+        <i class="bi bi-arrow-right ms-2"></i>
+  
+      </button>
+  
+    </div>
+  
+  </div>
