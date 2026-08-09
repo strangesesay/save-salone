@@ -101,3 +101,68 @@ has access to opportunities, justice, and sustainable development.
 
 
 </section>
+
+<section class="section-padding bg-light">
+
+    <div class="container">
+  
+  
+      <div class="text-center mb-5">
+  
+        <span class="section-label">
+          OUR FIVE PILLARS
+        </span>
+  
+        <h2 class="display-6 fw-bold mt-2">
+  
+          Areas Where We Create Impact
+  
+        </h2>
+  
+        <p class="text-muted mx-auto"
+           style="max-width:700px">
+  
+          SAVE SALONE works with communities and partners
+          across five key areas to build a stronger,
+          healthier and more sustainable Sierra Leone.
+  
+        </p>
+  
+      </div>
+  
+  
+      <div class="row g-4">
+  
+        @for (program of programs; track program.id) {
+  
+          <div class="col-lg-4 col-md-6">
+  
+            <app-program-card
+              [program]="program"
+              (viewDetails)="selectedProgram = $event">
+            </app-program-card>
+  
+          </div>
+  
+        }
+  
+      </div>
+  
+  
+      <div class="text-center mt-5">
+  
+        <a
+          routerLink="/programs"
+          class="btn btn-success btn-lg">
+  
+          Explore All Programs
+  
+          <i class="bi bi-arrow-right ms-2"></i>
+  
+        </a>
+  
+      </div>
+  
+    </div>
+  
+  </section>
