@@ -1,0 +1,143 @@
+.modal-content {
+
+  border: none;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+}
+
+.donation-intro {
+
+  display: flex;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  margin-bottom: 25px;
+
+  border-radius: 14px;
+
+  background: #f1f8f5;
+
+}
+
+.donation-intro > i {
+
+  color: #0b6e4f;
+
+  font-size: 30px;
+
+}
+
+.donation-intro h5 {
+
+  font-weight: 700;
+
+}
+
+.donation-intro p {
+
+  margin-bottom: 0;
+
+  color: #6b7280;
+
+}
+
+.quick-amounts {
+
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+}
+
+.quick-amounts .btn {
+
+  border-radius: 50px;
+
+}
+
+.payment-options {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+}
+
+.payment-option {
+
+  border: 1px solid #dee2e6;
+
+  border-radius: 12px;
+
+  padding: 15px;
+
+  cursor: pointer;
+
+  transition: .2s;
+
+}
+
+.payment-option:has(input:checked) {
+
+  border-color: #0b6e4f;
+
+  background: #f1f8f5;
+
+}
+
+.payment-option input {
+
+  margin-right: 8px;
+
+}
+
+.payment-option i {
+
+  color: #0b6e4f;
+
+  margin-right: 6px;
+
+}
+
+.security-notice {
+
+  display: flex;
+
+  gap: 10px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: #fff8e1;
+
+  color: #665500;
+
+  font-size: 13px;
+
+}
+
+.security-notice i {
+
+  font-size: 20px;
+
+}
+
+@media (max-width: 576px) {
+
+  .payment-options {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}

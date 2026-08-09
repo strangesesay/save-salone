@@ -1,0 +1,336 @@
+@if (visible && project) {
+
+  <div
+    class="modal fade show d-block"
+    tabindex="-1"
+    role="dialog"
+    aria-modal="true">
+
+    <div
+      class="modal-dialog modal-dialog-centered modal-lg">
+
+      <div class="modal-content">
+
+
+        <!-- Header -->
+
+        <div class="modal-header">
+
+          <div>
+
+            <span class="text-success fw-bold">
+
+              SUPPORT THIS PROJECT
+
+            </span>
+
+            <h4 class="modal-title fw-bold mt-1">
+
+              {{ project.title }}
+
+            </h4>
+
+          </div>
+
+          <button
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+            (click)="close()">
+          </button>
+
+        </div>
+
+
+        <!-- Body -->
+
+        <div class="modal-body">
+
+
+          <div class="donation-intro">
+
+            <i class="bi bi-heart-fill"></i>
+
+            <div>
+
+              <h5>
+                Make a Difference
+              </h5>
+
+              <p>
+                Your contribution helps SAVE SALONE
+                deliver meaningful and sustainable
+                impact in communities.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <form
+            [formGroup]="donationForm"
+            (ngSubmit)="submitDonation()">
+
+
+            <!-- Name -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Full Name *
+              </label>
+
+              <input
+                type="text"
+                class="form-control"
+                formControlName="donorName"
+                placeholder="Enter your full name"
+              />
+
+              @if (
+                donationForm.controls.donorName.touched &&
+                donationForm.controls.donorName.invalid
+              ) {
+
+                <small class="text-danger">
+                  Please enter your name.
+                </small>
+
+              }
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Phone Number *
+              </label>
+
+              <input
+                type="tel"
+                class="form-control"
+                formControlName="phone"
+                placeholder="e.g. 076123456"
+              />
+
+              @if (
+                donationForm.controls.phone.touched &&
+                donationForm.controls.phone.invalid
+              ) {
+
+                <small class="text-danger">
+                  Enter a valid Sierra Leone
+                  mobile number.
+                </small>
+
+              }
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email"
+                placeholder="you@example.com"
+              />
+
+            </div>
+
+
+            <!-- Amount -->
+
+            <div class="mb-3">
+
+              <label class="form-label">
+                Donation Amount (Le) *
+              </label>
+
+              <input
+                type="number"
+                class="form-control"
+                formControlName="amount"
+                min="1"
+              />
+
+            </div>
+
+
+            <!-- Quick amounts -->
+
+            <div class="mb-4">
+
+              <label class="form-label">
+                Quick Amount
+              </label>
+
+              <div class="quick-amounts">
+
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  (click)="donationForm.patchValue({amount: 100})">
+
+                  Le 100
+
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  (click)="donationForm.patchValue({amount: 500})">
+
+                  Le 500
+
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  (click)="donationForm.patchValue({amount: 1000})">
+
+                  Le 1,000
+
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  (click)="donationForm.patchValue({amount: 5000})">
+
+                  Le 5,000
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- Payment Method -->
+
+            <div class="mb-4">
+
+              <label class="form-label">
+                Payment Method
+              </label>
+
+              <div class="payment-options">
+
+
+                <label
+                  class="payment-option">
+
+                  <input
+                    type="radio"
+                    formControlName="paymentMethod"
+                    value="Orange Money"
+                  />
+
+                  <span>
+
+                    <i class="bi bi-phone"></i>
+
+                    Orange Money
+
+                  </span>
+
+                </label>
+
+
+                <label
+                  class="payment-option">
+
+                  <input
+                    type="radio"
+                    formControlName="paymentMethod"
+                    value="Bank Transfer"
+                  />
+
+                  <span>
+
+                    <i class="bi bi-bank"></i>
+
+                    Bank Transfer
+
+                  </span>
+
+                </label>
+
+
+              </div>
+
+            </div>
+
+
+            <!-- Security Notice -->
+
+            <div class="security-notice">
+
+              <i class="bi bi-shield-check"></i>
+
+              <span>
+
+                SAVE SALONE will never ask for
+                your mobile money PIN or banking
+                password through this website.
+
+              </span>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="d-flex gap-2 mt-4">
+
+              <button
+                type="button"
+                class="btn btn-outline-secondary flex-fill"
+                (click)="close()">
+
+                Cancel
+
+              </button>
+
+              <button
+                type="submit"
+                class="btn btn-success flex-fill">
+
+                <i class="bi bi-heart-fill me-2"></i>
+
+                Continue Donation
+
+              </button>
+
+            </div>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="modal-backdrop fade show">
+  </div>
+
+}

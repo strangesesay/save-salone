@@ -1,0 +1,150 @@
+[
+    {
+      "id": 1,
+      "title": "Community Digital Literacy Initiative",
+      "category": "Education",
+      "location": "Makeni, Northern Sierra Leone",
+      "duration": "12 Months",
+      "budget": "Le 250,000",
+      "status": "Ongoing",
+      "image": "assets/images/projects/digital-literacy.jpg",
+      "description": "A community-focused initiative designed to improve digital literacy among young people, teachers and community members.",
+      "objectives": [
+        "Improve basic computer literacy",
+        "Train young people in digital skills",
+        "Support teachers with digital learning tools",
+        "Promote safe and responsible technology use"
+      ],
+      "beneficiaries": [
+        "Young people",
+        "Teachers",
+        "Students",
+        "Community members"
+      ],
+      "startDate": "January 2026",
+      "endDate": "December 2026"
+    },
+    {
+      "id": 2,
+      "title": "Community Tree Planting Programme",
+      "category": "Environment",
+      "location": "Bombali District",
+      "duration": "18 Months",
+      "budget": "Le 180,000",
+      "status": "Ongoing",
+      "image": "assets/images/projects/tree-planting.jpg",
+      "description": "A community-led environmental programme promoting tree planting, environmental education and climate awareness.",
+      "objectives": [
+        "Plant trees in vulnerable communities",
+        "Promote environmental education",
+        "Increase community awareness of climate change",
+        "Encourage sustainable land management"
+      ],
+      "beneficiaries": [
+        "Farmers",
+        "Schools",
+        "Young people",
+        "Community groups"
+      ],
+      "startDate": "March 2026",
+      "endDate": "August 2027"
+    },
+    {
+      "id": 3,
+      "title": "Women in Sustainable Agriculture",
+      "category": "Agriculture",
+      "location": "Tonkolili District",
+      "duration": "12 Months",
+      "budget": "Le 320,000",
+      "status": "Upcoming",
+      "image": "assets/images/projects/women-agriculture.jpg",
+      "description": "Supporting women farmers with sustainable agricultural knowledge, business skills and access to improved farming practices.",
+      "objectives": [
+        "Train women farmers",
+        "Promote sustainable farming",
+        "Improve household food security",
+        "Strengthen women's agricultural enterprises"
+      ],
+      "beneficiaries": [
+        "Women farmers",
+        "Rural households",
+        "Agricultural cooperatives"
+      ],
+      "startDate": "September 2026",
+      "endDate": "August 2027"
+    },
+    {
+      "id": 4,
+      "title": "Community Health Awareness Campaign",
+      "category": "Health",
+      "location": "Koinadugu District",
+      "duration": "6 Months",
+      "budget": "Le 150,000",
+      "status": "Completed",
+      "image": "assets/images/projects/health-campaign.jpg",
+      "description": "A community health awareness campaign focused on preventive healthcare, sanitation, hygiene and maternal and child health.",
+      "objectives": [
+        "Increase health awareness",
+        "Promote good hygiene practices",
+        "Improve maternal health awareness",
+        "Promote preventive healthcare"
+      ],
+      "beneficiaries": [
+        "Women",
+        "Children",
+        "Families",
+        "Community health workers"
+      ],
+      "startDate": "January 2025",
+      "endDate": "June 2025"
+    },
+    {
+      "id": 5,
+      "title": "Community Human Rights Education",
+      "category": "Human Rights",
+      "location": "Port Loko District",
+      "duration": "9 Months",
+      "budget": "Le 200,000",
+      "status": "Completed",
+      "image": "assets/images/projects/human-rights.jpg",
+      "description": "A community education programme helping citizens understand their fundamental rights, responsibilities and available legal support mechanisms.",
+      "objectives": [
+        "Increase human rights awareness",
+        "Promote civic education",
+        "Improve legal literacy",
+        "Support vulnerable community members"
+      ],
+      "beneficiaries": [
+        "Women",
+        "Children",
+        "Young people",
+        "Community leaders"
+      ],
+      "startDate": "March 2025",
+      "endDate": "November 2025"
+    },
+    {
+      "id": 6,
+      "title": "School WASH Improvement Project",
+      "category": "Health",
+      "location": "Karene District",
+      "duration": "10 Months",
+      "budget": "Le 275,000",
+      "status": "Upcoming",
+      "image": "assets/images/projects/school-wash.jpg",
+      "description": "Improving water, sanitation and hygiene facilities in schools while educating students about healthy hygiene practices.",
+      "objectives": [
+        "Improve school sanitation",
+        "Provide safe water access",
+        "Promote hygiene education",
+        "Reduce preventable illnesses"
+      ],
+      "beneficiaries": [
+        "School children",
+        "Teachers",
+        "School communities"
+      ],
+      "startDate": "October 2026",
+      "endDate": "July 2027"
+    }
+  ]
