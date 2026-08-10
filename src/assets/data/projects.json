@@ -7,7 +7,7 @@
       "duration": "12 Months",
       "budget": "Le 250,000",
       "status": "Ongoing",
-      "image": "assets/images/projects/digital-literacy.jpg",
+      "image": "assets/img/programs/tech.jpg",
       "description": "A community-focused initiative designed to improve digital literacy among young people, teachers and community members.",
       "objectives": [
         "Improve basic computer literacy",
@@ -32,7 +32,7 @@
       "duration": "18 Months",
       "budget": "Le 180,000",
       "status": "Ongoing",
-      "image": "assets/images/projects/tree-planting.jpg",
+      "image": "assets/img/projects/env.jpg",
       "description": "A community-led environmental programme promoting tree planting, environmental education and climate awareness.",
       "objectives": [
         "Plant trees in vulnerable communities",
@@ -57,7 +57,7 @@
       "duration": "12 Months",
       "budget": "Le 320,000",
       "status": "Upcoming",
-      "image": "assets/images/projects/women-agriculture.jpg",
+      "image": "assets/img/projects/agric.jpg",
       "description": "Supporting women farmers with sustainable agricultural knowledge, business skills and access to improved farming practices.",
       "objectives": [
         "Train women farmers",
@@ -81,7 +81,7 @@
       "duration": "6 Months",
       "budget": "Le 150,000",
       "status": "Completed",
-      "image": "assets/images/projects/health-campaign.jpg",
+      "image": "assets/img/projects/health.jpg",
       "description": "A community health awareness campaign focused on preventive healthcare, sanitation, hygiene and maternal and child health.",
       "objectives": [
         "Increase health awareness",
@@ -106,7 +106,7 @@
       "duration": "9 Months",
       "budget": "Le 200,000",
       "status": "Completed",
-      "image": "assets/images/projects/human-rights.jpg",
+      "image": "assets/img/projects/hr.jpg",
       "description": "A community education programme helping citizens understand their fundamental rights, responsibilities and available legal support mechanisms.",
       "objectives": [
         "Increase human rights awareness",
@@ -131,7 +131,7 @@
       "duration": "10 Months",
       "budget": "Le 275,000",
       "status": "Upcoming",
-      "image": "assets/images/projects/school-wash.jpg",
+      "image": "assets/img/projects/edu.jpg",
       "description": "Improving water, sanitation and hygiene facilities in schools while educating students about healthy hygiene practices.",
       "objectives": [
         "Improve school sanitation",

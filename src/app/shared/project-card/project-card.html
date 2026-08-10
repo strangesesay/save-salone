@@ -1,100 +1,85 @@
 <article class="project-card h-100">
 
-    <div class="project-image">
-  
-      <img
-        [src]="project.image"
-        [alt]="project.title"
-        loading="lazy"
-      />
-  
-      <span
-        class="status-badge"
-        [class.ongoing]="project.status === 'Ongoing'"
-        [class.completed]="project.status === 'Completed'"
-        [class.upcoming]="project.status === 'Upcoming'">
-  
-        {{ project.status }}
-  
-      </span>
-  
-    </div>
-  
-  
-    <div class="project-content">
-  
-      <span class="project-category">
-  
-        {{ project.category }}
-  
-      </span>
-  
-      <h3>
-  
-        {{ project.title }}
-  
-      </h3>
-  
-      <p>
-  
-        {{ project.description }}
-  
-      </p>
-  
-  
-      <div class="project-meta">
-  
-        <div>
-  
-          <i class="bi bi-geo-alt"></i>
-  
-          {{ project.location }}
-  
-        </div>
-  
-        <div>
-  
-          <i class="bi bi-calendar3"></i>
-  
-          {{ project.duration }}
-  
-        </div>
-  
-      </div>
-  
-    </div>
-    <div class="project-actions">
+  <div class="project-image">
 
-      <button
-        type="button"
-        class="btn btn-success"
-        (click)="openDetails()">
-    
-        View Project
-    
-        <i class="bi bi-arrow-right ms-2"></i>
-    
-      </button>
-    
-    
-      @if (
-        project.status === 'Ongoing' ||
-        project.status === 'Upcoming'
-      ) {
-    
-        <button
-          type="button"
-          class="btn btn-warning"
-          (click)="openDonation()">
-    
-          <i class="bi bi-heart-fill me-1"></i>
-    
-          Donate
-    
-        </button>
-    
-      }
-    
+    <img
+      [src]="project.image"
+      [alt]="project.title"
+      loading="lazy"
+    />
+
+    <span
+      class="status-badge"
+      [class.ongoing]="project.status === 'Ongoing'"
+      [class.completed]="project.status === 'Completed'"
+      [class.upcoming]="project.status === 'Upcoming'">
+
+      {{ project.status }}
+
+    </span>
+
+  </div>
+
+
+  <div class="project-content">
+
+    <span class="project-category">
+
+      {{ project.category }}
+
+    </span>
+
+    <h3>
+
+      {{ project.title }}
+
+    </h3>
+
+    <div class="project-status text-muted mb-2">
+      Status: {{ project.status }}
     </div>
-  
-  </article>
+
+    <p>
+
+      {{ project.description }}
+
+    </p>
+
+
+    <div class="project-meta">
+
+      <div>
+
+        <i class="bi bi-geo-alt"></i>
+
+        {{ project.location }}
+
+      </div>
+
+      <div>
+
+        <i class="bi bi-calendar3"></i>
+
+        {{ project.duration }}
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="project-actions">
+
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="openDetails()">
+
+      View Project Details
+
+      <i class="bi bi-arrow-right ms-2"></i>
+
+    </button>
+
+  </div>
+
+</article>

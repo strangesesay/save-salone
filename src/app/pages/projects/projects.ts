@@ -1,11 +1,11 @@
-import { Component, inject, OnInit, Input, Output } from '@angular/core';
-import { Project } from '../../core/interfaces/project.interface';
-import { ProjectService } from '../../core/services/project';
-import Swal from 'sweetalert2';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ProjectCard } from '../../shared/project-card/project-card';
 import { DonationModal } from '../../shared/donation-modal/donation-modal';
+import { Project } from '../../core/interfaces/project.interface';
+import Swal from 'sweetalert2';
+import { ProjectService } from '../../core/services/project';
 
 @Component({
   selector: 'app-projects',
@@ -16,8 +16,6 @@ import { DonationModal } from '../../shared/donation-modal/donation-modal';
 export class Projects implements OnInit{
   private readonly projectService =
   inject(ProjectService);
-
-
 
 projects: Project[] = [];
 
@@ -35,6 +33,22 @@ selectedStatus = 'All';
 
 loading = true;
 
+pageSize = 6;
+
+currentPage = 1;
+
+get totalPages(): number {
+  return Math.max(1, Math.ceil(this.filteredProjects.length / this.pageSize));
+}
+
+get pageNumbers(): number[] {
+  return Array.from({ length: this.totalPages }, (_, i) => i + 1);
+}
+
+get pagedProjects(): Project[] {
+  const start = (this.currentPage - 1) * this.pageSize;
+  return this.filteredProjects.slice(start, start + this.pageSize);
+}
 
 ngOnInit(): void {
 
@@ -116,8 +130,24 @@ filterProjects(): void {
 
     });
 
+  this.currentPage = 1;
+
 }
 
+
+changePage(page: number): void {
+  if (page >= 1 && page <= this.totalPages) {
+    this.currentPage = page;
+  }
+}
+
+previousPage(): void {
+  this.changePage(this.currentPage - 1);
+}
+
+nextPage(): void {
+  this.changePage(this.currentPage + 1);
+}
 
 showProject(project: Project): void {
 
@@ -212,5 +242,4 @@ closeDonation(): void {
   this.donationProject = null;
 
 }
-
 }

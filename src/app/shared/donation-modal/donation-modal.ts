@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { DonationService } from '../../core/services/donation';
 import { Project } from '../../core/interfaces/project.interface';
@@ -22,11 +22,11 @@ export class DonationModal {
 
 
   @Input()
-  project: Project | null = null;
+  visible = false;
 
 
   @Input()
-  visible = false;
+  project: Project | null = null;
 
 
   @Output()
@@ -74,6 +74,10 @@ export class DonationModal {
 
   });
 
+
+  closeModal(): void {
+    this.closed.emit();
+  }
 
   close(): void {
 
