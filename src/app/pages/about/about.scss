@@ -736,51 +736,21 @@
 @media (max-width: 768px) {
 
   .section-padding {
-
     padding: 70px 0;
-
   }
 
-
-  .section-title {
-
+  .section-title,
+  .section-heading h2,
+  .cta-box h2 {
     font-size: 32px;
-
   }
-
-
-  .section-heading h2 {
-
-    font-size: 32px;
-
-  }
-
 
   .mission-card {
-
     padding: 30px;
-
   }
 
-
-  .about-image img {
-
-    height: 400px;
-
-  }
-
-
+  .about-image img,
   .approach-image img {
-
     height: 400px;
-
   }
-
-
-  .cta-box h2 {
-
-    font-size: 32px;
-
-  }
-
 }

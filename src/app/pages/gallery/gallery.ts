@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MediaService } from '../../core/services/media-service';
 import { MediaItem } from '../../core/interfaces/media.interface';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/dist/sweetalert2.all.js';
 import { MediaCard } from "../../shared/media-card/media-card";
 import { FormsModule } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
