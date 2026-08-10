@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Volunteer } from './volunteer';
+import { GetInvolved } from './get-involved';
 
-describe('Volunteer', () => {
-  let component: Volunteer;
-  let fixture: ComponentFixture<Volunteer>;
+describe('GetInvolved', () => {
+  let component: GetInvolved;
+  let fixture: ComponentFixture<GetInvolved>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Volunteer]
+      imports: [GetInvolved]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Volunteer);
+    fixture = TestBed.createComponent(GetInvolved);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

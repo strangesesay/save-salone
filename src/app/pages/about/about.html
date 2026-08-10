@@ -1,1 +1,657 @@
-<p>about works!</p>
+<!-- =========================================
+     ABOUT HERO
+========================================= -->
+
+<section class="about-hero">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-8">
+
+        <span class="hero-label">
+          ABOUT SAVE SALONE
+        </span>
+
+        <h1>
+          Building Stronger Communities.
+          Creating Lasting Change.
+        </h1>
+
+        <p>
+          SAVE SALONE is a civil society organization
+          committed to supporting communities through
+          education, environmental protection,
+          agriculture, health, and human rights
+          and legal education.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHO WE ARE
+========================================= -->
+
+<section class="section-padding who-section">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+
+        <div class="about-image">
+
+          <img
+            src="assets/images/about/save-salone-community.jpg"
+            alt="SAVE SALONE community engagement"
+          />
+
+          <div class="image-badge">
+
+            <strong>
+              5
+            </strong>
+
+            <span>
+              Strategic Pillars
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-lg-6">
+
+        <span class="section-label">
+          WHO WE ARE
+        </span>
+
+        <h2 class="section-title">
+          Working With Communities,
+          Not Just For Communities
+        </h2>
+
+        <p class="section-text">
+
+          SAVE SALONE is a Sierra Leonean civil society
+          organization focused on empowering individuals,
+          families and communities to identify challenges,
+          develop practical solutions and create sustainable
+          opportunities.
+
+        </p>
+
+        <p class="section-text">
+
+          Our work is built around the understanding that
+          sustainable development begins with people.
+          We therefore work alongside communities and
+          stakeholders to strengthen knowledge, capacity,
+          resilience and participation.
+
+        </p>
+
+        <p class="section-text">
+
+          Through our programmes and partnerships, we aim
+          to contribute to healthier, better educated,
+          environmentally responsible, economically
+          resilient and rights-conscious communities.
+
+        </p>
+
+
+        <div class="about-actions">
+
+          <a
+            routerLink="/get-involved"
+            class="btn btn-success">
+
+            Get Involved
+
+          </a>
+
+          <a
+            routerLink="/projects"
+            class="btn btn-outline-success">
+
+            Explore Our Projects
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MISSION & VISION
+========================================= -->
+
+<section class="mission-section section-padding">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- MISSION -->
+
+      <div class="col-lg-6">
+
+        <div class="mission-card">
+
+          <div class="mission-icon">
+
+            <i class="bi bi-bullseye"></i>
+
+          </div>
+
+          <span>
+            OUR MISSION
+          </span>
+
+          <h2>
+            Empowering People,
+            Strengthening Communities
+          </h2>
+
+          <p>
+
+            To empower individuals and communities
+            through education, sustainable development,
+            health promotion, environmental protection,
+            agricultural development and human rights
+            awareness.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- VISION -->
+
+      <div class="col-lg-6">
+
+        <div class="mission-card vision-card">
+
+          <div class="mission-icon">
+
+            <i class="bi bi-eye-fill"></i>
+
+          </div>
+
+          <span>
+            OUR VISION
+          </span>
+
+          <h2>
+            A Stronger and More Inclusive
+            Sierra Leone
+          </h2>
+
+          <p>
+
+            A Sierra Leone where communities are
+            empowered, healthy, educated, environmentally
+            responsible, economically resilient and
+            able to understand and exercise their rights.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     STRATEGIC PILLARS
+========================================= -->
+
+<section class="pillars-section section-padding">
+
+  <div class="container">
+
+    <div class="section-heading text-center">
+
+      <span>
+        WHAT WE DO
+      </span>
+
+      <h2>
+        Our Five Strategic Pillars
+      </h2>
+
+      <p>
+        Our programmes are organized around five
+        interconnected areas that address some of
+        the most important needs of communities.
+      </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      @for (
+        pillar of pillars;
+        track pillar.title
+      ) {
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="pillar-card">
+
+            <div class="pillar-icon">
+
+              <i
+                class="bi"
+                [class]="pillar.icon">
+              </i>
+
+            </div>
+
+            <h3>
+              {{ pillar.title }}
+            </h3>
+
+            <p>
+              {{ pillar.description }}
+            </p>
+
+            <a
+              routerLink="/programs">
+
+              Learn More
+
+              <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     OUR APPROACH
+========================================= -->
+
+<section class="approach-section section-padding">
+
+  <div class="container">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+
+        <span class="section-label">
+          OUR APPROACH
+        </span>
+
+        <h2 class="section-title">
+          From Community Needs
+          to Practical Solutions
+        </h2>
+
+        <p class="section-text">
+
+          We believe effective development programmes
+          should be informed by the realities of the
+          communities they serve.
+
+        </p>
+
+        <p class="section-text">
+
+          Our approach therefore focuses on listening,
+          participation, collaboration, capacity building
+          and measurable results.
+
+        </p>
+
+        <div class="approach-list">
+
+          <div class="approach-item">
+
+            <div class="approach-number">
+              01
+            </div>
+
+            <div>
+              <h4>
+                Listen
+              </h4>
+
+              <p>
+                Understand community needs and priorities.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="approach-item">
+
+            <div class="approach-number">
+              02
+            </div>
+
+            <div>
+              <h4>
+                Collaborate
+              </h4>
+
+              <p>
+                Work with communities and partners.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="approach-item">
+
+            <div class="approach-number">
+              03
+            </div>
+
+            <div>
+              <h4>
+                Act
+              </h4>
+
+              <p>
+                Implement practical and sustainable solutions.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="approach-item">
+
+            <div class="approach-number">
+              04
+            </div>
+
+            <div>
+              <h4>
+                Measure
+              </h4>
+
+              <p>
+                Monitor results and learn from our work.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-lg-6">
+
+        <div class="approach-image">
+
+          <img
+            src="assets/images/about/community-action.jpg"
+            alt="Community action and development"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     VALUES
+========================================= -->
+
+<section class="values-section section-padding">
+
+  <div class="container">
+
+    <div class="section-heading text-center">
+
+      <span>
+        WHAT GUIDES US
+      </span>
+
+      <h2>
+        Our Core Values
+      </h2>
+
+      <p>
+        The principles that guide how we work
+        with communities and partners.
+      </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      @for (
+        value of values;
+        track value.title
+      ) {
+
+        <div class="col-lg-4 col-md-6">
+
+          <div class="value-card">
+
+            <i
+              class="bi"
+              [class]="value.icon">
+            </i>
+
+            <div>
+
+              <h3>
+                {{ value.title }}
+              </h3>
+
+              <p>
+                {{ value.description }}
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     IMPACT
+========================================= -->
+
+<section class="impact-section">
+
+  <div class="container">
+
+    <div class="row text-center g-4">
+
+      <div class="col-6 col-lg-3">
+
+        <div class="impact-item">
+
+          <strong>
+            5
+          </strong>
+
+          <span>
+            Strategic Pillars
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-lg-3">
+
+        <div class="impact-item">
+
+          <strong>
+            100+
+          </strong>
+
+          <span>
+            Community Activities
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-lg-3">
+
+        <div class="impact-item">
+
+          <strong>
+            10+
+          </strong>
+
+          <span>
+            Communities Reached
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-lg-3">
+
+        <div class="impact-item">
+
+          <strong>
+            1
+          </strong>
+
+          <span>
+            Shared Vision
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CALL TO ACTION
+========================================= -->
+
+<section class="about-cta section-padding">
+
+  <div class="container">
+
+    <div class="cta-box text-center">
+
+      <span>
+        JOIN THE MOVEMENT
+      </span>
+
+      <h2>
+        Together, We Can SAVE SALONE
+      </h2>
+
+      <p>
+
+        Whether you volunteer your time, support
+        a project, partner with us or simply help
+        spread the word, your contribution matters.
+
+      </p>
+
+
+      <div class="cta-actions">
+
+        <a
+          routerLink="/get-involved"
+          class="btn btn-light">
+
+          Get Involved
+
+        </a>
+
+        <a
+          routerLink="/projects"
+          class="btn btn-outline-light">
+
+          Support Our Work
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

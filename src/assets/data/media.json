@@ -1,0 +1,94 @@
+{
+  "media": [
+    {
+      "id": 1,
+      "title": "Community Digital Literacy Training",
+      "description": "Young people participate in practical digital literacy training.",
+      "type": "image",
+      "category": "Education",
+      "thumbnail": "assets/images/gallery/digital-training.jpg",
+      "url": "assets/images/gallery/digital-training.jpg",
+      "date": "2026-08-01",
+      "location": "Makeni, Sierra Leone",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Community Tree Planting Campaign",
+      "description": "Community members participate in environmental restoration activities.",
+      "type": "image",
+      "category": "Environment",
+      "thumbnail": "assets/images/gallery/tree-planting.jpg",
+      "url": "assets/images/gallery/tree-planting.jpg",
+      "date": "2026-07-25",
+      "location": "Bombali District",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Women in Sustainable Agriculture",
+      "description": "Women farmers receive training in sustainable agricultural practices.",
+      "type": "image",
+      "category": "Agriculture",
+      "thumbnail": "assets/images/gallery/women-farmers.jpg",
+      "url": "assets/images/gallery/women-farmers.jpg",
+      "date": "2026-07-18",
+      "location": "Tonkolili District"
+    },
+    {
+      "id": 4,
+      "title": "Community Health Awareness",
+      "description": "Health awareness activities conducted within local communities.",
+      "type": "image",
+      "category": "Health",
+      "thumbnail": "assets/images/gallery/health-awareness.jpg",
+      "url": "assets/images/gallery/health-awareness.jpg",
+      "date": "2026-07-10",
+      "location": "Makeni"
+    },
+    {
+      "id": 5,
+      "title": "Legal Education Community Session",
+      "description": "Community members participate in human rights and legal education.",
+      "type": "image",
+      "category": "Human Rights",
+      "thumbnail": "assets/images/gallery/legal-education.jpg",
+      "url": "assets/images/gallery/legal-education.jpg",
+      "date": "2026-07-04",
+      "location": "Bombali District"
+    },
+    {
+      "id": 6,
+      "title": "SAVE SALONE Community Outreach",
+      "description": "SAVE SALONE team members during a community outreach programme.",
+      "type": "image",
+      "category": "Community",
+      "thumbnail": "assets/images/gallery/community-outreach.jpg",
+      "url": "assets/images/gallery/community-outreach.jpg",
+      "date": "2026-06-28",
+      "location": "Northern Sierra Leone"
+    },
+    {
+      "id": 7,
+      "title": "SAVE SALONE Programme Highlights",
+      "description": "Highlights from SAVE SALONE community programmes.",
+      "type": "video",
+      "category": "Events",
+      "thumbnail": "assets/images/gallery/video-cover.jpg",
+      "url": "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+      "date": "2026-06-20",
+      "location": "Sierra Leone"
+    },
+    {
+      "id": 8,
+      "title": "Environmental Awareness Programme",
+      "description": "Environmental education and awareness activities.",
+      "type": "video",
+      "category": "Environment",
+      "thumbnail": "assets/images/gallery/environment-video.jpg",
+      "url": "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+      "date": "2026-06-15",
+      "location": "Sierra Leone"
+    }
+  ]
+}

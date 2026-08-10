@@ -1,0 +1,89 @@
+<article
+  class="media-card"
+  (click)="openMedia()"
+  tabindex="0"
+  role="button"
+  (keydown.enter)="openMedia()">
+
+
+  <div class="media-image">
+
+    <img
+      [src]="media.thumbnail"
+      [alt]="media.title"
+      loading="lazy"
+    />
+
+
+    @if (media.type === 'video') {
+
+      <div class="play-button">
+
+        <i class="bi bi-play-fill"></i>
+
+      </div>
+
+    }
+
+
+    <span class="media-category">
+
+      {{ media.category }}
+
+    </span>
+
+
+    <div class="media-overlay">
+
+      <i
+        class="bi"
+        [class.bi-play-circle-fill]="
+          media.type === 'video'
+        "
+        [class.bi-zoom-in]="
+          media.type === 'image'
+        ">
+      </i>
+
+      <span>
+
+        @if (media.type === 'video') {
+          Watch Video
+        } @else {
+          View Photo
+        }
+
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="media-info">
+
+    <div class="media-date">
+
+      <i class="bi bi-calendar3"></i>
+
+      {{ media.date }}
+
+    </div>
+
+
+    <h3>
+
+      {{ media.title }}
+
+    </h3>
+
+
+    <p>
+
+      {{ media.description }}
+
+    </p>
+
+  </div>
+
+</article>

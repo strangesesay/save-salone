@@ -1,1 +1,656 @@
-<p>contact works!</p>
+<!-- HERO -->
+
+<section class="contact-hero">
+
+  <div class="container text-center">
+
+    <span>
+      GET IN TOUCH
+    </span>
+
+    <h1>
+      Contact SAVE SALONE
+    </h1>
+
+    <p>
+      Have a question, partnership idea, or want
+      to learn more about our work? We would love
+      to hear from you.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- CONTACT INFORMATION -->
+
+<section class="section-padding">
+
+  <div class="container">
+
+    <div class="section-heading text-center">
+
+      <span>
+        CONTACT INFORMATION
+      </span>
+
+      <h2>
+        We're Here to Listen
+      </h2>
+
+      <p>
+        Reach out to our team through any of
+        the channels below.
+      </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+
+      <!-- ADDRESS -->
+
+      <div class="col-lg-3 col-md-6">
+
+        <div class="contact-info-card">
+
+          <div class="contact-icon">
+
+            <i class="bi bi-geo-alt-fill"></i>
+
+          </div>
+
+          <h3>
+            Our Office
+          </h3>
+
+          <p>
+            SAVE SALONE<br>
+            Sierra Leone
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PHONE -->
+
+      <div class="col-lg-3 col-md-6">
+
+        <div class="contact-info-card">
+
+          <div class="contact-icon">
+
+            <i class="bi bi-telephone-fill"></i>
+
+          </div>
+
+          <h3>
+            Phone
+          </h3>
+
+          <p>
+
+            <a href="tel:+232XXXXXXXX">
+              +232 XX XXX XXX
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- EMAIL -->
+
+      <div class="col-lg-3 col-md-6">
+
+        <div class="contact-info-card">
+
+          <div class="contact-icon">
+
+            <i class="bi bi-envelope-fill"></i>
+
+          </div>
+
+          <h3>
+            Email
+          </h3>
+
+          <p>
+
+            <a href="mailto:info@savesalone.org">
+              info@savesalone.org
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- HOURS -->
+
+      <div class="col-lg-3 col-md-6">
+
+        <div class="contact-info-card">
+
+          <div class="contact-icon">
+
+            <i class="bi bi-clock-fill"></i>
+
+          </div>
+
+          <h3>
+            Office Hours
+          </h3>
+
+          <p>
+            Monday – Friday<br>
+            8:00 AM – 5:00 PM
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- CONTACT FORM + MAP -->
+
+<section class="contact-main section-padding">
+
+  <div class="container">
+
+    <div class="row g-5 align-items-stretch">
+
+
+      <!-- FORM -->
+
+      <div class="col-lg-6">
+
+        <div class="contact-form-card">
+
+          <div class="form-heading">
+
+            <span>
+              SEND US A MESSAGE
+            </span>
+
+            <h2>
+              How Can We Help?
+            </h2>
+
+            <p>
+              Fill out the form and a member of
+              our team will respond to you.
+            </p>
+
+          </div>
+
+
+          <form
+            (submit)="submitForm()"
+            novalidate>
+
+
+            <div class="row g-3">
+
+
+              <!-- NAME -->
+
+              <div class="col-md-6">
+
+                <label class="form-label">
+                  Full Name *
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  name="fullName"
+                  placeholder="Your full name"
+                />
+
+                <small
+                  class="text-danger"
+                  *ngIf="f.fullName.touched && f.fullName.invalid">
+
+                  Please enter your name.
+
+                </small>
+
+              </div>
+
+
+
+              <!-- EMAIL -->
+
+              <div class="col-md-6">
+
+                <label class="form-label">
+                  Email Address *
+                </label>
+
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="you@example.com"
+                />
+
+                <small
+                  class="text-danger"
+                  *ngIf="f.email.touched && f.email.invalid">
+
+                  Please enter a valid email.
+
+                </small>
+
+              </div>
+
+
+
+              <!-- PHONE -->
+
+              <div class="col-12">
+
+                <label class="form-label">
+                  Phone Number
+                </label>
+
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="phone"
+                  placeholder="e.g. 076123456"
+                />
+
+                <small
+                  class="text-danger"
+                  *ngIf="f.phone.touched && f.phone.invalid">
+
+                  Please enter a valid
+                  Sierra Leone number.
+
+                </small>
+
+              </div>
+
+
+
+              <!-- SUBJECT -->
+
+              <div class="col-12">
+
+                <label class="form-label">
+                  Subject *
+                </label>
+
+                <select
+                  class="form-select"
+                  name="subject">
+
+                  <option value="">
+                    Select a subject
+                  </option>
+
+                  <option value="General Enquiry">
+                    General Enquiry
+                  </option>
+
+                  <option value="Partnership">
+                    Partnership
+                  </option>
+
+                  <option value="Volunteering">
+                    Volunteering
+                  </option>
+
+                  <option value="Donation">
+                    Donation
+                  </option>
+
+                  <option value="Project Information">
+                    Project Information
+                  </option>
+
+                  <option value="Media">
+                    Media & Communications
+                  </option>
+
+                  <option value="Other">
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+
+
+              <!-- MESSAGE -->
+
+              <div class="col-12">
+
+                <label class="form-label">
+                  Message *
+                </label>
+
+                <textarea
+                  class="form-control"
+                  rows="7"
+                  name="message"
+                  placeholder="Write your message here...">
+                </textarea>
+
+                <small
+                  class="text-danger"
+                  *ngIf="f.message.touched && f.message.invalid">
+
+                  Please enter at least
+                  10 characters.
+
+                </small>
+
+              </div>
+
+
+
+              <!-- SUBMIT -->
+
+              <div class="col-12">
+
+                <button
+                  type="submit"
+                  class="btn btn-success btn-lg w-100"
+                  [disabled]="submitting">
+
+                  <ng-container *ngIf="submitting; else sendLabel">
+
+                    <span
+                      class="spinner-border spinner-border-sm me-2">
+                    </span>
+
+                    Sending Message...
+
+                  </ng-container>
+
+                  <ng-template #sendLabel>
+
+                    <i class="bi bi-send me-2"></i>
+
+                    Send Message
+
+                  </ng-template>
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- MAP -->
+
+      <div class="col-lg-6">
+
+        <div class="map-card">
+
+          <div class="map-header">
+
+            <span>
+              FIND US
+            </span>
+
+            <h2>
+              Our Location
+            </h2>
+
+            <p>
+              Visit our office or get in touch
+              with our team before your visit.
+            </p>
+
+          </div>
+
+
+          <div class="map-container">
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3941.91029947081!2d-12.057169099999989!3d8.8879318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssl!4v1786347112918!5m2!1sen!2ssl" 
+            width="600" height="450" style="border:0;" 
+            allowfullscreen="" loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section class="faq-section section-padding">
+
+  <div class="container">
+
+    <div class="section-heading text-center">
+
+      <span>
+        FREQUENTLY ASKED QUESTIONS
+      </span>
+
+      <h2>
+        Common Questions
+      </h2>
+
+    </div>
+
+
+    <div
+      class="accordion mx-auto"
+      id="contactFaq"
+      style="max-width: 900px;">
+
+
+      <!-- FAQ 1 -->
+
+      <div class="accordion-item">
+
+        <h2
+          class="accordion-header"
+          id="faqHeadingOne">
+
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqOne">
+
+            What does SAVE SALONE do?
+
+          </button>
+
+        </h2>
+
+
+        <div
+          id="faqOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#contactFaq">
+
+          <div class="accordion-body">
+
+            SAVE SALONE is a civil society organization
+            working to strengthen communities through
+            education, environmental protection,
+            agriculture, health, and human rights
+            and legal education.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FAQ 2 -->
+
+      <div class="accordion-item">
+
+        <h2
+          class="accordion-header"
+          id="faqHeadingTwo">
+
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqTwo">
+
+            How can I volunteer?
+
+          </button>
+
+        </h2>
+
+
+        <div
+          id="faqTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#contactFaq">
+
+          <div class="accordion-body">
+
+            Visit our Get Involved page and complete
+            the volunteer application form. Our team
+            will review your application and contact
+            you.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FAQ 3 -->
+
+      <div class="accordion-item">
+
+        <h2
+          class="accordion-header"
+          id="faqHeadingThree">
+
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqThree">
+
+            Can organizations partner with SAVE SALONE?
+
+          </button>
+
+        </h2>
+
+
+        <div
+          id="faqThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#contactFaq">
+
+          <div class="accordion-body">
+
+            Yes. We welcome partnerships with
+            community organizations, NGOs, institutions,
+            businesses, development partners and other
+            stakeholders whose objectives align with
+            our mission.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- FAQ 4 -->
+
+      <div class="accordion-item">
+
+        <h2
+          class="accordion-header"
+          id="faqHeadingFour">
+
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqFour">
+
+            How can I support SAVE SALONE?
+
+          </button>
+
+        </h2>
+
+
+        <div
+          id="faqFour"
+          class="accordion-collapse collapse"
+          data-bs-parent="#contactFaq">
+
+          <div class="accordion-body">
+
+            You can support our work by volunteering,
+            partnering with us, donating, participating
+            in community activities, or helping raise
+            awareness about our programmes.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>

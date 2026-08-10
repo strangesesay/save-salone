@@ -1,0 +1,336 @@
+.involved-hero {
+
+  padding: 120px 0 80px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      rgba(11, 110, 79, .95),
+      rgba(46, 139, 87, .88)
+    );
+
+}
+
+.involved-hero span {
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+}
+
+.involved-hero h1 {
+
+  font-size: 55px;
+
+  font-weight: 800;
+
+  margin: 15px 0;
+
+}
+
+.involved-hero p {
+
+  max-width: 700px;
+
+  margin: auto;
+
+  line-height: 1.8;
+
+}
+
+.section-label {
+
+  color: #0b6e4f;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+}
+
+.section-title {
+
+  font-size: 38px;
+
+  font-weight: 800;
+
+  margin: 12px 0 20px;
+
+}
+
+.section-text {
+
+  color: #6c757d;
+
+  line-height: 1.8;
+
+}
+
+.involvement-points {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 25px;
+
+}
+
+.involvement-points i {
+
+  color: #0b6e4f;
+
+  margin-right: 10px;
+
+}
+
+.involvement-image {
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+}
+
+.involvement-image img {
+
+  width: 100%;
+
+  height: 450px;
+
+  object-fit: cover;
+
+}
+
+.ways-section {
+
+  background: #f7faf8;
+
+}
+
+.section-heading span {
+
+  color: #0b6e4f;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+}
+
+.section-heading h2 {
+
+  font-size: 36px;
+
+  font-weight: 800;
+
+  margin-top: 10px;
+
+}
+
+.involvement-card {
+
+  height: 100%;
+
+  padding: 35px 25px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.06);
+
+  transition: .3s ease;
+
+}
+
+.involvement-card:hover {
+
+  transform: translateY(-7px);
+
+}
+
+.involvement-card > i {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 65px;
+
+  height: 65px;
+
+  border-radius: 50%;
+
+  background: #eaf6f0;
+
+  color: #0b6e4f;
+
+  font-size: 28px;
+
+  margin-bottom: 20px;
+
+}
+
+.involvement-card h3 {
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+}
+
+.involvement-card p {
+
+  color: #6c757d;
+
+  line-height: 1.7;
+
+}
+
+.involvement-card a {
+
+  color: #0b6e4f;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+}
+
+.volunteer-section {
+
+  background: #f4f7f5;
+
+}
+
+.form-wrapper {
+
+  padding: 50px;
+
+  background: #fff;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 50px rgba(0,0,0,.08);
+
+}
+
+.form-heading {
+
+  margin-bottom: 40px;
+
+}
+
+.form-heading span {
+
+  color: #0b6e4f;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+}
+
+.form-heading h2 {
+
+  font-size: 36px;
+
+  font-weight: 800;
+
+  margin: 10px 0;
+
+}
+
+.form-heading p {
+
+  color: #6c757d;
+
+}
+
+.form-label {
+
+  font-weight: 600;
+
+}
+
+.form-control,
+.form-select {
+
+  min-height: 50px;
+
+  border-radius: 9px;
+
+}
+
+textarea.form-control {
+
+  min-height: 120px;
+
+}
+
+.privacy-notice {
+
+  display: flex;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: #f1f8f5;
+
+  color: #53605a;
+
+  font-size: 13px;
+
+}
+
+.privacy-notice i {
+
+  color: #0b6e4f;
+
+  font-size: 20px;
+
+}
+
+@media (max-width: 768px) {
+
+  .involved-hero h1 {
+
+    font-size: 40px;
+
+  }
+
+  .section-title {
+
+    font-size: 30px;
+
+  }
+
+  .form-wrapper {
+
+    padding: 25px;
+
+  }
+
+}

@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { Login } from './pages/login/login';
 import { Contact } from './pages/contact/contact';
 import { Donate } from './pages/donate/donate';
-import { Volunteer } from './pages/volunteer/volunteer';
 import { Gallery } from './pages/gallery/gallery';
 import { News } from './pages/news/news';
 import { PublicLayout } from './layouts/public-layout/public-layout';
@@ -13,6 +12,7 @@ import { Projects } from './pages/projects/projects';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { AdminLayout } from './layouts/admin-layout/admin-layout';
 import { NotFound } from './pages/not-found/not-found';
+import { GetInvolved } from './pages/get-involved/get-involved';
 
 export const routes: Routes = [
 
@@ -54,19 +54,20 @@ export const routes: Routes = [
         },
         
         {
-        path:'volunteer',
-        component:Volunteer
+        path:'get-involved',
+        component:GetInvolved
         },
         
         {
         path:'donate',
         component:Donate
         },
-        
-        {
+
+           {
         path:'contact',
         component:Contact
         },
+        
         
         {
         path:'login',
@@ -110,5 +111,12 @@ export const routes: Routes = [
   loadComponent: () =>
     import('./pages/news/news')
       .then(m => m.News)
+},
+
+{
+  path: 'gallery',
+  loadComponent: () =>
+    import('./pages/gallery/gallery')
+      .then(m => m.Gallery)
 }
 ];
