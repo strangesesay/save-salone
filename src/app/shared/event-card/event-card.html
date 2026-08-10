@@ -1,0 +1,92 @@
+<article class="event-card h-100">
+
+  <div class="event-image">
+
+    <img
+      [src]="event.image"
+      [alt]="event.title"
+      loading="lazy"
+    />
+
+    <span class="event-category">
+
+      {{ event.category }}
+
+    </span>
+
+  </div>
+
+
+  <div class="event-content">
+
+    <div class="event-date">
+
+      <span class="day">
+
+        {{ event.date | slice:8:10 }}
+
+      </span>
+
+      <span class="month">
+
+        {{ event.date | slice:5:7 }}
+
+      </span>
+
+    </div>
+
+
+    <div class="event-info">
+
+      <h3>
+
+        {{ event.title }}
+
+      </h3>
+
+      <p>
+
+        {{ event.description }}
+
+      </p>
+
+
+      <div class="event-meta">
+
+        <div>
+
+          <i class="bi bi-geo-alt"></i>
+
+          {{ event.location }}
+
+        </div>
+
+        <div>
+
+          <i class="bi bi-clock"></i>
+
+          {{ event.time }}
+
+        </div>
+
+      </div>
+
+
+      @if (event.registrationRequired) {
+
+        <button
+          type="button"
+          class="btn btn-success w-100 mt-3"
+          (click)="registerForEvent()">
+
+          Register for Event
+
+        </button>
+
+      }
+
+    </div>
+
+  </div>
+
+</article>

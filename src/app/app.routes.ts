@@ -103,5 +103,12 @@ export const routes: Routes = [
         
         component:NotFound
         
-        }
+        },
+
+        {
+  path: 'news',
+  loadComponent: () =>
+    import('./pages/news/news')
+      .then(m => m.News)
+}
 ];

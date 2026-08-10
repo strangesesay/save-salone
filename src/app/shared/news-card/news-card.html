@@ -1,1 +1,58 @@
-<p>news-card works!</p>
+<article class="news-card h-100">
+
+  <div class="news-image">
+
+    <img
+      [src]="article.image"
+      [alt]="article.title"
+      loading="lazy"
+    />
+
+    <span class="news-category">
+
+      {{ article.category }}
+
+    </span>
+
+  </div>
+
+
+  <div class="news-content">
+
+    <div class="news-date">
+
+      <i class="bi bi-calendar3 me-1"></i>
+
+      {{ article.publishedDate }}
+
+    </div>
+
+
+    <h3>
+
+      {{ article.title }}
+
+    </h3>
+
+
+    <p>
+
+      {{ article.excerpt }}
+
+    </p>
+
+
+    <button
+      type="button"
+      class="btn btn-link p-0"
+      (click)="openArticle()">
+
+      Read More
+
+      <i class="bi bi-arrow-right ms-1"></i>
+
+    </button>
+
+  </div>
+
+</article>

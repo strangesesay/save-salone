@@ -1,1 +1,423 @@
-<p>news works!</p>
+<section class="news-hero">
+
+  <div class="container text-center">
+
+    <span>
+      STAY INFORMED
+    </span>
+
+    <h1>
+      News & Events
+    </h1>
+
+    <p>
+      Follow SAVE SALONE's latest activities,
+      stories, announcements and community events.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="section-padding">
+
+  <div class="container">
+
+
+    <!-- Featured Story -->
+
+    @if (featuredArticle) {
+
+      <div class="featured-news mb-5">
+
+        <div class="row g-0 align-items-stretch">
+
+          <div class="col-lg-6">
+
+            <img
+              [src]="featuredArticle.image"
+              [alt]="featuredArticle.title"
+            />
+
+          </div>
+
+
+          <div class="col-lg-6">
+
+            <div class="featured-content">
+
+              <span class="featured-label">
+                FEATURED STORY
+              </span>
+
+              <span class="category">
+                {{ featuredArticle.category }}
+              </span>
+
+              <h2>
+                {{ featuredArticle.title }}
+              </h2>
+
+              <p>
+                {{ featuredArticle.excerpt }}
+              </p>
+
+              <button
+                type="button"
+                class="btn btn-success"
+                (click)="openArticle(featuredArticle)">
+
+                Read Full Story
+
+                <i class="bi bi-arrow-right ms-2"></i>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    }
+
+
+    <!-- News -->
+
+    <div class="section-heading">
+
+      <span>
+        LATEST NEWS
+      </span>
+
+      <h2>
+        Stories From the Field
+      </h2>
+
+    </div>
+
+
+    <!-- Filters -->
+
+    <div class="filter-box mb-5">
+
+      <div class="row g-3">
+
+        <div class="col-lg-7">
+
+          <div class="input-group">
+
+            <span class="input-group-text">
+
+              <i class="bi bi-search"></i>
+
+            </span>
+
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search news..."
+              [(ngModel)]="searchTerm"
+              (input)="filterNews()"
+            />
+
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-3">
+
+          <select
+            class="form-select"
+            [(ngModel)]="selectedCategory"
+            (change)="filterNews()">
+
+            <option value="All">
+              All Categories
+            </option>
+
+            <option value="Education">
+              Education
+            </option>
+
+            <option value="Environment">
+              Environment
+            </option>
+
+            <option value="Agriculture">
+              Agriculture
+            </option>
+
+            <option value="Health">
+              Health
+            </option>
+
+            <option value="Human Rights">
+              Human Rights
+            </option>
+
+            <option value="Organization">
+              Organization
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="col-lg-2">
+
+          <button
+            type="button"
+            class="btn btn-outline-success w-100"
+            (click)="clearFilters()">
+
+            Reset
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    @if (loading) {
+
+      <div class="text-center py-5">
+
+        <div
+          class="spinner-border text-success">
+        </div>
+
+        <p class="mt-3">
+          Loading news...
+        </p>
+
+      </div>
+
+    }
+
+
+    @if (
+      !loading &&
+      filteredArticles.length > 0
+    ) {
+
+      <div class="row g-4">
+
+        @for (
+          article of filteredArticles;
+          track article.id
+        ) {
+
+          <div class="col-lg-4 col-md-6">
+
+            <app-news-card
+              [article]="article"
+              (readMore)="openArticle($event)">
+            </app-news-card>
+
+          </div>
+
+        }
+
+      </div>
+
+    }
+
+
+    @if (
+      !loading &&
+      filteredArticles.length === 0
+    ) {
+
+      <div class="empty-state text-center py-5">
+
+        <i class="bi bi-newspaper"></i>
+
+        <h3>
+          No News Found
+        </h3>
+
+        <p>
+          Try another search or category.
+        </p>
+
+        <button
+          class="btn btn-success"
+          (click)="clearFilters()">
+
+          View All News
+
+        </button>
+
+      </div>
+
+    }
+
+
+  </div>
+
+</section>
+
+
+<!-- Events -->
+
+<section class="events-section section-padding">
+
+  <div class="container">
+
+    <div class="section-heading text-center">
+
+      <span>
+        GET INVOLVED
+      </span>
+
+      <h2>
+        Upcoming Events
+      </h2>
+
+      <p>
+        Join us at our upcoming community,
+        training and awareness activities.
+      </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      @for (
+        event of events;
+        track event.id
+      ) {
+
+        <div class="col-lg-4">
+
+          <app-event-card
+            [event]="event"
+            (register)="registerForEvent($event)">
+          </app-event-card>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Article Modal -->
+
+@if (selectedArticle) {
+
+  <div
+    class="modal fade show d-block"
+    tabindex="-1">
+
+    <div
+      class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+
+      <div class="modal-content">
+
+        <div class="modal-header">
+
+          <div>
+
+            <span class="text-success fw-bold">
+
+              {{ selectedArticle.category }}
+
+            </span>
+
+            <h4 class="modal-title fw-bold mt-1">
+
+              {{ selectedArticle.title }}
+
+            </h4>
+
+          </div>
+
+          <button
+            type="button"
+            class="btn-close"
+            (click)="closeArticle()">
+          </button>
+
+        </div>
+
+
+        <div class="modal-body">
+
+          <img
+            [src]="selectedArticle.image"
+            [alt]="selectedArticle.title"
+            class="article-modal-image mb-4"
+          />
+
+
+          <div class="article-meta mb-4">
+
+            <span>
+
+              <i class="bi bi-calendar3"></i>
+
+              {{ selectedArticle.publishedDate }}
+
+            </span>
+
+            <span>
+
+              <i class="bi bi-person"></i>
+
+              {{ selectedArticle.author }}
+
+            </span>
+
+          </div>
+
+
+          <p class="article-content">
+
+            {{ selectedArticle.content }}
+
+          </p>
+
+        </div>
+
+
+        <div class="modal-footer">
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            (click)="closeArticle()">
+
+            Close
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div
+    class="modal-backdrop fade show"
+    (click)="closeArticle()">
+  </div>
+
+}
