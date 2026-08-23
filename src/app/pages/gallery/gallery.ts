@@ -18,8 +18,8 @@ export class Gallery implements OnInit {
   private readonly mediaService =
     inject(MediaService);
 
-    private readonly sanitizer =
-  inject(DomSanitizer);
+  private readonly sanitizer =
+    inject(DomSanitizer);
 
 
   media: MediaItem[] = [];
@@ -37,6 +37,10 @@ export class Gallery implements OnInit {
   selectedType = 'All';
 
   loading = true;
+
+  currentPage = 1;
+
+  pageSize = 6;
 
 
   categories = [
@@ -59,6 +63,28 @@ export class Gallery implements OnInit {
 
   ];
 
+  get totalPages(): number {
+    return Math.max(
+      1,
+      Math.ceil(this.filteredMedia.length / this.pageSize)
+    );
+  }
+
+  get pageNumbers(): number[] {
+    return Array.from(
+      { length: this.totalPages },
+      (_, index) => index + 1
+    );
+  }
+
+  get paginatedMedia(): MediaItem[] {
+    const start = (this.currentPage - 1) * this.pageSize;
+
+    return this.filteredMedia.slice(
+      start,
+      start + this.pageSize
+    );
+  }
 
   ngOnInit(): void {
 
@@ -119,7 +145,7 @@ export class Gallery implements OnInit {
     url
   );
 
-}
+  }
 
   filterMedia(): void {
 
@@ -128,6 +154,7 @@ export class Gallery implements OnInit {
         .trim()
         .toLowerCase();
 
+    this.currentPage = 1;
 
     this.filteredMedia =
       this.media.filter(item => {
@@ -164,6 +191,21 @@ export class Gallery implements OnInit {
 
   }
 
+  goToPage(page: number): void {
+    if (page < 1 || page > this.totalPages) {
+      return;
+    }
+
+    this.currentPage = page;
+  }
+
+  previousPage(): void {
+    this.goToPage(this.currentPage - 1);
+  }
+
+  nextPage(): void {
+    this.goToPage(this.currentPage + 1);
+  }
 
   openMedia(
     media: MediaItem
@@ -191,6 +233,8 @@ export class Gallery implements OnInit {
 
     this.selectedType =
       'All';
+
+    this.currentPage = 1;
 
     this.filteredMedia =
       this.media;

@@ -120,7 +120,7 @@
       <div class="row g-4">
 
         @for (
-          program of filteredPrograms;
+          program of paginatedPrograms;
           track program.id
         ) {
 
@@ -136,6 +136,52 @@
         }
 
       </div>
+
+      @if (filteredPrograms.length > 0 && totalPages > 1) {
+
+        <nav class="d-flex justify-content-center mt-5" aria-label="Program pagination">
+
+          <ul class="pagination pagination-lg mb-0">
+
+            <li class="page-item" [class.disabled]="currentPage === 1">
+
+              <button class="page-link" type="button" (click)="previousPage()" [disabled]="currentPage === 1" aria-label="Previous page">
+
+                Previous
+
+              </button>
+
+            </li>
+
+            @for (page of pageNumbers; track page) {
+
+              <li class="page-item" [class.active]="page === currentPage">
+
+                <button class="page-link" type="button" (click)="goToPage(page)">
+
+                  {{ page }}
+
+                </button>
+
+              </li>
+
+            }
+
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+
+                <button class="page-link" type="button" (click)="nextPage()" [disabled]="currentPage === totalPages" aria-label="Next page">
+
+                Next
+
+              </button>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+      }
 
     }
 

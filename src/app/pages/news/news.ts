@@ -35,6 +35,33 @@ export class News  implements OnInit {
 
   loading = true;
 
+  currentPage = 1;
+
+  pageSize = 6;
+
+  get totalPages(): number {
+    return Math.max(
+      1,
+      Math.ceil(this.filteredArticles.length / this.pageSize)
+    );
+  }
+
+  get pageNumbers(): number[] {
+    return Array.from(
+      { length: this.totalPages },
+      (_, index) => index + 1
+    );
+  }
+
+  get paginatedArticles(): NewsArticle[] {
+    const start = (this.currentPage - 1) * this.pageSize;
+
+    return this.filteredArticles.slice(
+      start,
+      start + this.pageSize
+    );
+  }
+
 
   ngOnInit(): void {
 
@@ -98,6 +125,7 @@ export class News  implements OnInit {
         .trim()
         .toLowerCase();
 
+    this.currentPage = 1;
 
     this.filteredArticles =
       this.articles.filter(article => {
@@ -127,6 +155,20 @@ export class News  implements OnInit {
 
   }
 
+  changePage(page: number): void {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+    }
+  }
+
+  previousPage(): void {
+    this.changePage(this.currentPage - 1);
+  }
+
+  nextPage(): void {
+    this.changePage(this.currentPage + 1);
+  }
+
 
   openArticle(
     article: NewsArticle
@@ -151,6 +193,8 @@ export class News  implements OnInit {
 
     this.selectedCategory =
       'All';
+
+    this.currentPage = 1;
 
     this.filteredArticles =
       this.articles;

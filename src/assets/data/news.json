@@ -6,7 +6,7 @@
       "category": "Education",
       "excerpt": "A new initiative is helping young people and community members develop practical digital skills.",
       "content": "SAVE SALONE has launched a community digital literacy programme designed to improve access to practical technology skills. The programme focuses on young people, teachers and community members who want to improve their digital literacy and use technology more effectively.",
-      "image": "assets/img/programs/tech.jpg",
+      "image": "assets/img/savesalone/img39.jpg",
       "author": "SAVE SALONE Communications Team",
       "publishedDate": "2026-08-05",
       "featured": true
@@ -17,7 +17,7 @@
       "category": "Environment",
       "excerpt": "Local communities are taking action to restore degraded areas and promote environmental protection.",
       "content": "Communities across Northern Sierra Leone are participating in a tree planting campaign aimed at promoting environmental awareness and sustainable land management.",
-      "image": "assets/img/programs/env.jpg",
+      "image": "assets/img/savesalone/img22.jpg",
       "author": "SAVE SALONE",
       "publishedDate": "2026-07-28",
       "featured": false
@@ -28,7 +28,7 @@
       "category": "Agriculture",
       "excerpt": "Women farmers are receiving practical training in sustainable farming and agricultural entrepreneurship.",
       "content": "The programme provides women farmers with practical knowledge in sustainable agriculture, farm management, food production and small agricultural enterprises.",
-      "image": "assets/img/programs/agric.jpg",
+      "image": "assets/img/savesalone/img14.jpg",
       "author": "SAVE SALONE Agriculture Team",
       "publishedDate": "2026-07-20",
       "featured": false
@@ -39,7 +39,7 @@
       "category": "Health",
       "excerpt": "SAVE SALONE continues to promote preventive healthcare, sanitation and healthy community practices.",
       "content": "The community health awareness campaign is helping families understand the importance of hygiene, sanitation, preventive healthcare and early access to health services.",
-      "image": "assets/img/programs/health.jpg",
+      "image": "assets/img/savesalone/img39.jpg",
       "author": "SAVE SALONE Health Team",
       "publishedDate": "2026-07-14",
       "featured": false
@@ -61,7 +61,7 @@
       "category": "Organization",
       "excerpt": "The organization is strengthening partnerships with communities and local stakeholders.",
       "content": "SAVE SALONE is expanding its network of community organizations, institutions and development partners to increase the reach and sustainability of its programmes.",
-      "image": "assets/img/programs/tech.jpg",
+      "image": "assets/img/savesalone/img36.jpg",
       "author": "SAVE SALONE",
       "publishedDate": "2026-06-27",
       "featured": false
@@ -76,7 +76,7 @@
       "location": "Makeni, Sierra Leone",
       "date": "2026-08-22",
       "time": "10:00 AM - 2:00 PM",
-      "image": "assets/img/programs/env.jpg",
+      "image": "assets/img/savesalone/img39.jpg",
       "registrationRequired": true
     },
     {
@@ -98,7 +98,7 @@
       "location": "Tonkolili District",
       "date": "2026-09-18",
       "time": "10:00 AM - 3:00 PM",
-      "image": "assets/img/programs/agric.jpg",
+      "image": "assets/img/savesalone/img33.jpg",
       "registrationRequired": true
     }
   ]

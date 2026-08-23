@@ -39,6 +39,12 @@ export class About {
       title: 'Human Rights & Legal Education',
       description:
         'Promoting human rights awareness, legal education, equality, justice and access to essential information.'
+    },
+        {
+      icon: 'bi-cpu-fill',
+      title: 'Technology & Innovation',
+      description:
+        'Promoting technology adoption and innovation for sustainable development and community empowerment.'
     }
   ];
 

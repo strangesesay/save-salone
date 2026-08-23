@@ -10,11 +10,11 @@
     
     linear-gradient(
     135deg,
-    rgba(11, 110, 79, 0.514),
-    rgba(46, 139, 86, 0.521)
+    rgba(11, 110, 79, 0.397),
+    rgba(46, 139, 86, 0.349)
     ),
     
-    url('/assets/hero/hero.jpg');
+    url('/assets/img/savesalone/img1.jpg');
     
     background-size:cover;
     
@@ -41,4 +41,65 @@
     
     color:#0B6E4F;
     
+    }
+
+
+    .hero-title,
+    .hero-description,
+    .hero-actions{
+
+    opacity:0;
+
+    animation:hero-text-reveal .8s ease-out forwards;
+
+    }
+
+
+    .hero-description{
+
+    animation-delay:.2s;
+
+    }
+
+
+    .hero-actions{
+
+    animation-delay:.4s;
+
+    }
+
+
+    @keyframes hero-text-reveal{
+
+    from{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    }
+
+    to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce){
+
+    .hero-title,
+    .hero-description,
+    .hero-actions{
+
+    animation:none;
+
+    opacity:1;
+
+    }
+
     }

@@ -179,7 +179,7 @@
       <div class="row g-4">
 
         @for (
-          item of filteredMedia;
+          item of paginatedMedia;
           track item.id
         ) {
 
@@ -196,6 +196,52 @@
         }
 
       </div>
+
+      @if (totalPages > 1) {
+
+        <nav class="d-flex justify-content-center mt-5" aria-label="Gallery pagination">
+
+          <ul class="pagination pagination-lg mb-0">
+
+            <li class="page-item" [class.disabled]="currentPage === 1">
+
+              <button class="page-link" type="button" (click)="previousPage()" aria-label="Previous page">
+
+                Previous
+
+              </button>
+
+            </li>
+
+            @for (page of pageNumbers; track page) {
+
+              <li class="page-item" [class.active]="page === currentPage">
+
+                <button class="page-link" type="button" (click)="goToPage(page)">
+
+                  {{ page }}
+
+                </button>
+
+              </li>
+
+            }
+
+            <li class="page-item" [class.disabled]="currentPage === totalPages">
+
+              <button class="page-link" type="button" (click)="nextPage()" aria-label="Next page">
+
+                Next
+
+              </button>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+      }
 
     }
 

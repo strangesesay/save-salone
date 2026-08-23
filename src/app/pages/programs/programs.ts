@@ -19,78 +19,122 @@ export class Programs {
   private readonly programService =
   inject(ProgramService);
 
-programs: Program[] = [];
+  programs: Program[] = [];
 
-filteredPrograms: Program[] = [];
+  filteredPrograms: Program[] = [];
 
-selectedProgram: Program | null = null;
+  selectedProgram: Program | null = null;
 
-selectedCategory = 'All';
+  selectedCategory = 'All';
 
-loading = true;
+  loading = true;
 
-ngOnInit(): void {
+  currentPage = 1;
 
-  this.loadPrograms();
+  pageSize = 6;
 
-}
+  get totalPages(): number {
+    return Math.max(
+      1,
+      Math.ceil(this.filteredPrograms.length / this.pageSize)
+    );
+  }
 
-loadPrograms(): void {
+  get pageNumbers(): number[] {
+    return Array.from(
+      { length: this.totalPages },
+      (_, index) => index + 1
+    );
+  }
 
-  this.programService
-    .getPrograms()
-    .subscribe({
+  get paginatedPrograms(): Program[] {
+    const start = (this.currentPage - 1) * this.pageSize;
 
-      next: programs => {
+    return this.filteredPrograms.slice(
+      start,
+      start + this.pageSize
+    );
+  }
 
-        this.programs = programs;
+  ngOnInit(): void {
 
-        this.filteredPrograms = programs;
-
-        this.loading = false;
-
-      },
-
-      error: error => {
-
-        console.error(
-          'Unable to load programs:',
-          error
-        );
-
-        this.loading = false;
-
-      }
-
-    });
-
-}
-
-filterPrograms(category: string): void {
-
-  this.selectedCategory = category;
-
-  if (category === 'All') {
-
-    this.filteredPrograms = this.programs;
-
-    return;
+    this.loadPrograms();
 
   }
 
-  this.filteredPrograms =
-    this.programs.filter(
-      program =>
-        program.title === category
-    );
+  loadPrograms(): void {
 
-}
+    this.programService
+      .getPrograms()
+      .subscribe({
 
-showProgram(program: Program): void {
+        next: programs => {
 
-  this.selectedProgram = program;
+          this.programs = programs;
 
-}
+          this.filteredPrograms = programs;
+
+          this.loading = false;
+
+        },
+
+        error: error => {
+
+          console.error(
+            'Unable to load programs:',
+            error
+          );
+
+          this.loading = false;
+
+        }
+
+      });
+
+  }
+
+  filterPrograms(category: string): void {
+
+    this.selectedCategory = category;
+    this.currentPage = 1;
+
+    if (category === 'All') {
+
+      this.filteredPrograms = this.programs;
+
+      return;
+
+    }
+
+    this.filteredPrograms =
+      this.programs.filter(
+        program =>
+          program.title === category
+      );
+
+  }
+
+  goToPage(page: number): void {
+    if (page < 1 || page > this.totalPages) {
+      return;
+    }
+
+    this.currentPage = page;
+  }
+
+  previousPage(): void {
+    this.goToPage(this.currentPage - 1);
+  }
+
+  nextPage(): void {
+    this.goToPage(this.currentPage + 1);
+  }
+
+  showProgram(program: Program): void {
+
+    this.selectedProgram = program;
+
+  }
 
 
 }

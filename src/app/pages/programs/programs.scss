@@ -2,13 +2,18 @@
 
     padding: 120px 0 80px;
   
+        color: white;
+
     background:
       linear-gradient(
-        rgba(11, 110, 79, 0.92),
-        rgba(46, 139, 87, 0.92)
-      );
+        rgba(11, 110, 79, 0.664),
+        rgba(46, 139, 86, 0.651)
+      ),
+      
+    url('/assets/img/savesalone/img22.jpg')
+    center / cover no-repeat;
   
-    color: white;
+
   
   }
   
@@ -75,5 +80,25 @@
     padding-left: 0;
   
     border: none;
+  }
   
+  .pagination {
+    --bs-pagination-color: #0b6e4f;
+    --bs-pagination-bg: #fff;
+    --bs-pagination-border-color: #dfe7e3;
+    --bs-pagination-hover-color: #0b6e4f;
+    --bs-pagination-hover-bg: #edf7f3;
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #0b6e4f;
+    --bs-pagination-active-border-color: #0b6e4f;
+    --bs-pagination-disabled-color: #9aa7a1;
+    --bs-pagination-disabled-bg: #fff;
+    --bs-pagination-disabled-border-color: #e9ecef;
+  }
+
+  .pagination .page-link {
+    border-radius: 10px;
+    margin: 0 4px;
+    min-width: 44px;
+    font-weight: 600;
   }
