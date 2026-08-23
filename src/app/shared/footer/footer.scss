@@ -11,3 +11,31 @@ footer a{
     color:#FFD54F;
     
     }
+
+    .social-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    }
+
+    .social-links a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    }
+
+    .social-links i {
+
+    font-size: 18px;
+
+    }

@@ -44,6 +44,10 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ng test
 ```
 
+## Donation transfer details
+
+Update the bank-transfer values in `src/environments/environment.ts`. These values are included in the browser bundle, so do not store passwords, private keys, or other secrets there.
+
 ## Running end-to-end tests
 
 For end-to-end (e2e) testing, run:
