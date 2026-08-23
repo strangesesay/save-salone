@@ -79,6 +79,19 @@ export class DonationModal {
     this.closed.emit();
   }
 
+  onPaymentMethodChange(): void {
+
+    if (
+      this.donationForm.controls.paymentMethod.value ===
+      'Bank Transfer'
+    ) {
+
+      this.showBankInstructions();
+
+    }
+
+  }
+
   close(): void {
 
     this.closed.emit();

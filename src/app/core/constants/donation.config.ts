@@ -2,13 +2,13 @@ export const DONATION_CONFIG = {
 
     orangeMoney: {
   
-      agentCode: 'YOUR_ORANGE_MONEY_AGENT_CODE',
+      agentCode: '079525354',
   
       merchantName: 'SAVE SALONE',
   
       // Replace this with the actual Orange Money
       // USSD transaction format you use.
-      ussdPrefix: '*YOUR_USSD_CODE#'
+      ussdPrefix: '#144*3*1*079525354#'
   
     },
   
