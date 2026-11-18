@@ -1,158 +1,106 @@
 .event-card {
-
-  background: #fff;
-
-  border-radius: 18px;
-
+  height: 100%;
   overflow: hidden;
+  border: 1px solid #e5ece8;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 8px 26px rgba(24, 53, 40, 0.045);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
 
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, .07);
-
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
 }
 
 .event-image {
-
-  height: 200px;
-
   position: relative;
-
+  height: 190px;
+  overflow: hidden;
+  background: #eaf1ed;
 }
 
 .event-image img {
-
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
-
 }
 
 .event-category {
-
   position: absolute;
-
-  top: 15px;
-
-  left: 15px;
-
-  background: #fff;
-
-  color: #0b6e4f;
-
-  padding: 6px 12px;
-
-  border-radius: 50px;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
+  top: 1rem;
+  left: 1rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #087653;
+  font-size: 0.68rem;
+  font-weight: 800;
 }
 
 .event-content {
-
   display: flex;
-
-  gap: 18px;
-
-  padding: 22px;
-
+  gap: 1rem;
+  padding: 1.25rem;
 }
 
 .event-date {
-
-  min-width: 55px;
-
-  height: 65px;
-
-  border-radius: 10px;
-
-  background: #0b6e4f;
-
-  color: white;
-
-  text-align: center;
-
+  min-width: 3.5rem;
+  height: 4.1rem;
   overflow: hidden;
-
+  border-radius: 0.9rem;
+  background: #087653;
+  color: #fff;
+  text-align: center;
 }
 
 .event-date .day {
-
   display: block;
-
-  font-size: 22px;
-
+  padding-top: 0.38rem;
+  font-size: 1.4rem;
   font-weight: 800;
-
-  padding-top: 7px;
-
+  line-height: 1;
 }
 
 .event-date .month {
-
   display: block;
-
-  font-size: 10px;
-
-  opacity: .85;
-
+  margin-top: 0.25rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .event-info {
-
+  min-width: 0;
   flex: 1;
-
 }
 
 .event-info h3 {
-
-  font-size: 19px;
-
-  font-weight: 700;
-
+  font-size: 1.05rem;
+  font-weight: 800;
 }
 
 .event-info p {
-
-  color: #6c757d;
-
-  font-size: 14px;
-
+  color: #748179;
+  font-size: 0.84rem;
   line-height: 1.6;
-
 }
 
 .event-meta {
-
   display: flex;
-
   flex-direction: column;
-
-  gap: 6px;
-
-  color: #6c757d;
-
-  font-size: 12px;
-
+  gap: 0.4rem;
+  color: #748179;
+  font-size: 0.74rem;
 }
 
 .event-meta i {
-
-  color: #0b6e4f;
-
-  margin-right: 5px;
-
+  margin-right: 0.3rem;
+  color: #087653;
 }
 
 @media (max-width: 500px) {
-
   .event-content {
-
     flex-direction: column;
-
   }
-
 }

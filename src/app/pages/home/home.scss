@@ -1,0 +1,135 @@
+.home-mission {
+  position: relative;
+  background:
+    radial-gradient(circle at 8% 15%, rgba(8, 118, 83, 0.06), transparent 22rem),
+    #f5f8f6;
+}
+
+.home-section-title {
+  max-width: 720px;
+  margin: 0.65rem 0 0;
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.home-section-intro {
+  max-width: 560px;
+  margin: 0 0 0.25rem;
+  color: #748179;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.mission-card {
+  position: relative;
+  height: 100%;
+  min-height: 290px;
+  overflow: hidden;
+  padding: clamp(1.7rem, 3.5vw, 2.8rem);
+  border: 1px solid #e3ebe6;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(24, 53, 40, 0.05);
+}
+
+.mission-card::after {
+  position: absolute;
+  right: -3.2rem;
+  bottom: -5rem;
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid rgba(8, 118, 83, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.2rem rgba(8, 118, 83, 0.025), 0 0 0 2.4rem rgba(8, 118, 83, 0.02);
+  content: '';
+}
+
+.mission-card-primary {
+  border-color: #087653;
+  background: linear-gradient(140deg, #07583f, #087653);
+  color: #fff;
+}
+
+.mission-card-primary h3,
+.mission-card-primary p,
+.mission-card-primary .mission-label {
+  color: #fff;
+}
+
+.mission-icon {
+  display: grid;
+  width: 3.15rem;
+  height: 3.15rem;
+  margin-bottom: 1.35rem;
+  border-radius: 1rem;
+  background: #eaf5ef;
+  color: #087653;
+  font-size: 1.35rem;
+  place-items: center;
+}
+
+.mission-card-primary .mission-icon {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffdb8d;
+}
+
+.mission-label {
+  color: #087653;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mission-card h3 {
+  max-width: 32rem;
+  margin: 0.75rem 0;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  font-weight: 800;
+  line-height: 1.22;
+}
+
+.mission-card p {
+  max-width: 34rem;
+  margin: 0;
+  color: #748179;
+  line-height: 1.8;
+}
+
+.mission-card-primary p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.home-programs {
+  background: #fff;
+}
+
+.home-program-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.25rem;
+}
+
+.home-program-heading .home-section-intro {
+  margin-top: 0.8rem;
+}
+
+.home-program-heading .btn {
+  flex: 0 0 auto;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 767.98px) {
+  .home-program-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .mission-card {
+    min-height: 0;
+  }
+}

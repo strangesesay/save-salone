@@ -1,54 +1,243 @@
-/* You can add global styles to this file, and also import other style files */
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-:root{
-    --primary:#0B6E4F;
-    --secondary:#2E8B57;
-    --accent:#FFD54F;
-    --dark:#1F2937;
-    --light:#F8F9FA;
-    --text:#374151;
+:root {
+  --primary: #087653;
+  --primary-dark: #07583f;
+  --secondary: #2e8b57;
+  --accent: #ffcb55;
+  --dark: #172a22;
+  --text: #43534b;
+  --muted: #748179;
+  --light: #f5f8f6;
+  --surface: #ffffff;
+  --line: #e5ece8;
+  --shadow-soft: 0 16px 42px rgba(24, 53, 40, 0.08);
+  --shadow-card: 0 10px 32px rgba(24, 53, 40, 0.07);
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:var(--light);
-    color:var(--text);
+body {
+  background: var(--light);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
 }
 
-.section-padding{
-    padding:90px 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  color: var(--dark);
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -0.035em;
 }
 
-.btn-primary{
-    background:var(--primary);
-    border:none;
+::selection {
+  background: rgba(8, 118, 83, 0.18);
+  color: var(--dark);
 }
 
-.btn-primary:hover{
-    background:#09553d;
+.section-padding {
+  padding: clamp(4rem, 7vw, 6.5rem) 0;
 }
 
-.title{
-    font-weight:700;
+.row.g-5 {
+  --bs-gutter-x: 1.5rem;
 }
 
-.shadow-card{
-    border:none;
-    border-radius:15px;
-    transition:.3s;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+.page-hero-left h1,
+.page-hero-left p {
+  margin-left: 0;
 }
 
-.shadow-card:hover{
-    transform:translateY(-8px);
+.btn {
+  border-radius: 0.85rem;
+  font-weight: 700;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
 }
 
-img{
-    max-width:100%;
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-success {
+  border-color: var(--primary);
+  background: var(--primary);
+  box-shadow: 0 8px 18px rgba(8, 118, 83, 0.16);
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  border-color: var(--primary-dark);
+  background: var(--primary-dark);
+}
+
+.btn-outline-success {
+  border-color: rgba(8, 118, 83, 0.35);
+  color: var(--primary);
+}
+
+.btn-outline-success:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+  border-color: #e0e8e3;
+  border-radius: 0.8rem;
+}
+
+.form-control,
+.form-select {
+  min-height: 3rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(8, 118, 83, 0.55);
+  box-shadow: 0 0 0 0.22rem rgba(8, 118, 83, 0.12);
+}
+
+.input-group .input-group-text {
+  border-radius: 0.8rem 0 0 0.8rem;
+  background: #f4f8f5;
+  color: var(--primary);
+}
+
+.input-group .form-control {
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.shadow-card {
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-card);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.shadow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(8rem, 13vw, 11rem) 0 clamp(4.5rem, 8vw, 7rem);
+  color: #fff;
+  background-color: #07583f;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 203, 85, 0.2), transparent 25rem),
+    linear-gradient(110deg, rgba(5, 57, 41, 0.92), rgba(8, 118, 83, 0.74));
+  content: '';
+}
+
+.page-hero h1 {
+  max-width: 850px;
+  margin: 1rem auto;
+  color: #fff;
+  font-size: clamp(2.6rem, 6vw, 4.7rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.page-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(1rem, 1.6vw, 1.16rem);
+  line-height: 1.8;
+}
+
+.page-hero > .container > span,
+.page-hero .hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.page-hero > .container > span::before,
+.page-hero .hero-label::before {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: var(--accent);
+  content: '';
+}
+
+.section-heading {
+  margin-bottom: 2.5rem;
+}
+
+.section-heading > span,
+.section-label {
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0.7rem 0;
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+}
+
+.section-heading p {
+  max-width: 680px;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.modal-content {
+  border: 1px solid rgba(23, 42, 34, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 80px rgba(10, 30, 21, 0.25);
+}
+
+.pagination {
+  --bs-pagination-color: var(--primary);
+  --bs-pagination-border-color: var(--line);
+  --bs-pagination-hover-color: var(--primary-dark);
+  --bs-pagination-hover-bg: #edf7f2;
+  --bs-pagination-active-bg: var(--primary);
+  --bs-pagination-active-border-color: var(--primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

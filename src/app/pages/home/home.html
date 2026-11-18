@@ -1,168 +1,75 @@
-<app-hero></app-hero>
+<div class="home-page">
+  <app-hero></app-hero>
 
+  <app-statistics></app-statistics>
 
-<app-statistics></app-statistics>
-
-
-
-<section class="section-padding">
-
-
-<div class="container">
-
-
-<div class="text-center mb-5">
-
-
-<h2 class="title">
-
-Who We Are
-
-</h2>
-
-
-<p>
-
-Working together to create sustainable solutions.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="row">
-
-
-<div class="col-md-6">
-
-
-<div class="card shadow-card p-4">
-
-
-<h3>
-
-Our Mission
-
-</h3>
-
-
-<p>
-
-To empower vulnerable communities through education,
-environmental sustainability, agriculture,
-healthcare access, and human rights awareness.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-
-<div class="card shadow-card p-4">
-
-
-<h3>
-
-Our Vision
-
-</h3>
-
-
-<p>
-
-A prosperous Sierra Leone where every individual
-has access to opportunities, justice, and sustainable development.
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-<section class="section-padding bg-light">
-
+  <section class="section-padding home-mission">
     <div class="container">
-  
-  
-      <div class="text-center mb-5">
-  
-        <span class="section-label">
-          OUR FIVE PILLARS
-        </span>
-  
-        <h2 class="display-6 fw-bold mt-2">
-  
-          Areas Where We Create Impact
-  
-        </h2>
-  
-        <p class="text-muted mx-auto"
-           style="max-width:700px">
-  
-          SAVE SALONE works with communities and partners
-          across five key areas to build a stronger,
-          healthier and more sustainable Sierra Leone.
-  
-        </p>
-  
+      <div class="row align-items-end g-4 mb-4">
+        <div class="col-lg-7">
+          <span class="section-label">Who we are</span>
+          <h2 class="home-section-title">Working together to create sustainable solutions.</h2>
+        </div>
+        <div class="col-lg-5">
+          <p class="home-section-intro">
+            We empower communities to build a stronger, healthier and more resilient future.
+          </p>
+        </div>
       </div>
-  
-  
+
       <div class="row g-4">
-  
+        <div class="col-lg-6">
+          <article class="mission-card mission-card-primary">
+            <span class="mission-icon"><i class="bi bi-bullseye" aria-hidden="true"></i></span>
+            <span class="mission-label">Our mission</span>
+            <h3>Empowering people. Strengthening communities.</h3>
+            <p>
+              To empower vulnerable communities through education, environmental sustainability,
+              agriculture, healthcare access, and human rights awareness.
+            </p>
+          </article>
+        </div>
+        <div class="col-lg-6">
+          <article class="mission-card">
+            <span class="mission-icon"><i class="bi bi-eye" aria-hidden="true"></i></span>
+            <span class="mission-label">Our vision</span>
+            <h3>A future full of opportunity, justice and possibility.</h3>
+            <p>
+              A prosperous Sierra Leone where every individual has access to opportunities,
+              justice, and sustainable development.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding home-programs">
+    <div class="container">
+      <div class="home-program-heading">
+        <div>
+          <span class="section-label">Our five pillars</span>
+          <h2 class="home-section-title">Areas where we create impact</h2>
+          <p class="home-section-intro">
+            SAVE SALONE works with communities and partners across five key areas to build a
+            stronger, healthier and more sustainable Sierra Leone.
+          </p>
+        </div>
+        <a routerLink="/programs" class="btn btn-outline-success">
+          Explore all programs <i class="bi bi-arrow-up-right ms-2" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
         @for (program of programs; track program.id) {
-  
           <div class="col-lg-4 col-md-6">
-  
             <app-program-card
               [program]="program"
               (viewDetails)="selectedProgram = $event">
             </app-program-card>
-  
           </div>
-  
         }
-  
       </div>
-  
-  
-      <div class="text-center mt-5">
-  
-        <a
-          routerLink="/programs"
-          class="btn btn-success btn-lg">
-  
-          Explore All Programs
-  
-          <i class="bi bi-arrow-right ms-2"></i>
-  
-        </a>
-  
-      </div>
-  
     </div>
-  
   </section>
+</div>

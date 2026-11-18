@@ -1,6 +1,6 @@
 <!-- HERO -->
 
-<section class="contact-hero">
+<section class="contact-hero page-hero">
 
   <div class="container text-center">
 
@@ -205,7 +205,8 @@
 
 
           <form
-            (submit)="submitForm()"
+            [formGroup]="contactForm"
+            (ngSubmit)="submitForm()"
             novalidate>
 
 
@@ -216,14 +217,17 @@
 
               <div class="col-md-6">
 
-                <label class="form-label">
+                <label class="form-label" for="contact-name">
                   Full Name *
                 </label>
 
                 <input
                   type="text"
                   class="form-control"
-                  name="fullName"
+                  id="contact-name"
+                  formControlName="fullName"
+                  autocomplete="name"
+                  required
                   placeholder="Your full name"
                 />
 
@@ -243,14 +247,17 @@
 
               <div class="col-md-6">
 
-                <label class="form-label">
+                <label class="form-label" for="contact-email">
                   Email Address *
                 </label>
 
                 <input
                   type="email"
                   class="form-control"
-                  name="email"
+                  id="contact-email"
+                  formControlName="email"
+                  autocomplete="email"
+                  required
                   placeholder="you@example.com"
                 />
 
@@ -270,14 +277,16 @@
 
               <div class="col-12">
 
-                <label class="form-label">
+                <label class="form-label" for="contact-phone">
                   Phone Number
                 </label>
 
                 <input
                   type="tel"
                   class="form-control"
-                  name="phone"
+                  id="contact-phone"
+                  formControlName="phone"
+                  autocomplete="tel"
                   placeholder="e.g. 076123456"
                 />
 
@@ -298,13 +307,15 @@
 
               <div class="col-12">
 
-                <label class="form-label">
+                <label class="form-label" for="contact-subject">
                   Subject *
                 </label>
 
                 <select
                   class="form-select"
-                  name="subject">
+                  id="contact-subject"
+                  formControlName="subject"
+                  required>
 
                   <option value="">
                     Select a subject
@@ -348,14 +359,16 @@
 
               <div class="col-12">
 
-                <label class="form-label">
+                <label class="form-label" for="contact-message">
                   Message *
                 </label>
 
                 <textarea
                   class="form-control"
                   rows="7"
-                  name="message"
+                  id="contact-message"
+                  formControlName="message"
+                  required
                   placeholder="Write your message here...">
                 </textarea>
 

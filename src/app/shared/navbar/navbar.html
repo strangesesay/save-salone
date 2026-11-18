@@ -1,115 +1,66 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-xl fixed-top site-navbar" aria-label="Main navigation">
+  <div class="container">
+    <div class="navbar-shell">
+      <a
+        class="navbar-brand"
+        routerLink="/"
+        data-bs-toggle="collapse"
+        data-bs-target="#site-menu"
+        aria-label="Save Salone home"
+      >
+        <img src="assets/img/logo.jpg" alt="" class="brand-logo">
+        <span class="brand-copy">
+          <span class="brand-name">SAVE <span>SALONE</span></span>
+          <span class="brand-tagline">Hope in action</span>
+        </span>
+      </a>
 
-    <div class="container">
-    
-    <a class="navbar-brand fw-bold text-success d-flex align-items-center gap-2" routerLink="/" data-bs-toggle="collapse" data-bs-target="#menu">
-    
-    <img src="assets/img/logo.jpg" alt="SAVE SALONE logo" class="navbar-brand-img" />
-    
-    </a>
-    
-    <button
-    class="navbar-toggler"
-    data-bs-toggle="collapse"
-    data-bs-target="#menu">
-    
-    <span class="navbar-toggler-icon"></span>
-    
-    </button>
-    
-    <div class="collapse navbar-collapse" id="menu">
-    
-    <ul class="navbar-nav ms-auto align-items-lg-center">
-    
-    <li class="nav-item">
-    
-    <a routerLink="/" 
-    class="nav-link"
-    data-bs-toggle="collapse"
-    data-bs-target="#menu"
-    routerLinkActive="active">
-    Home
-    </a>
-    
-    </li>
-    
-    <li class="nav-item">
-    
-    <a routerLink="/about" class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu" routerLinkActive="active">About</a>
-    
-    </li>
-    
-    <li class="nav-item">
-    
-    <a routerLink="/programs" class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu" routerLinkActive="active"> Programs</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#site-menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    
-    </li>
-    
-    <li class="nav-item">
-    
-    <a routerLink="/projects" class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu" routerLinkActive="active">
-    
-    Projects
-    
-    </a>
-    
-    </li>
-    
-    <li class="nav-item">
-    
-    <a routerLink="/news" class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu" routerLinkActive="active">
-    
-    News
-    
-    </a>
-    
-    </li>
-    
-    <li class="nav-item">
-    
-    <a routerLink="/gallery" class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu" routerLinkActive="active">
-    
-    Gallery
-    
-    </a>
-    
-    </li>
-    
-    <li class="nav-item">
-    
-    <a routerLink="/get-involved" class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu" routerLinkActive="active">
-    
-    Get Involved
-    
-    </a>
-    
-    </li>
-    
-    <li class="nav-item">
-    
-    <a routerLink="/contact" class="nav-link" data-bs-toggle="collapse" data-bs-target="#menu" routerLinkActive="active">
-    
-    Contact
-    
-    </a>
-    
-    </li>
-    
-    <li class="nav-item ms-lg-3">
-    
-    <a routerLink="/projects" class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#menu">
-    
-    Donate
-    
-    </a>
-    
-    </li>
-    
-    </ul>
-    
+      <div class="collapse navbar-collapse" id="site-menu">
+        <ul class="navbar-nav ms-xl-auto align-items-xl-center">
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link" data-bs-toggle="collapse" data-bs-target="#site-menu" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/about" class="nav-link" data-bs-toggle="collapse" data-bs-target="#site-menu" routerLinkActive="active" ariaCurrentWhenActive="page">About</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/programs" class="nav-link" data-bs-toggle="collapse" data-bs-target="#site-menu" routerLinkActive="active" ariaCurrentWhenActive="page">Programs</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/projects" class="nav-link" data-bs-toggle="collapse" data-bs-target="#site-menu" routerLinkActive="active" ariaCurrentWhenActive="page">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/news" class="nav-link" data-bs-toggle="collapse" data-bs-target="#site-menu" routerLinkActive="active" ariaCurrentWhenActive="page">News</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/gallery" class="nav-link" data-bs-toggle="collapse" data-bs-target="#site-menu" routerLinkActive="active" ariaCurrentWhenActive="page">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/get-involved" class="nav-link" data-bs-toggle="collapse" data-bs-target="#site-menu" routerLinkActive="active" ariaCurrentWhenActive="page">Get involved</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact" class="nav-link" data-bs-toggle="collapse" data-bs-target="#site-menu" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
+          </li>
+          <li class="nav-item donate-item">
+            <a routerLink="/donate" class="btn donate-button" data-bs-toggle="collapse" data-bs-target="#site-menu">
+              <span>Donate</span>
+              <span class="donate-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    
-    </div>
-    
-    </nav>
+  </div>
+</nav>
