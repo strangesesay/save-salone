@@ -13,7 +13,6 @@ yarn-error.log
 
 # Environment variables
 .env
-.environments
 .env.*
 !.env.example
 
